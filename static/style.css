@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background: #eef2f7;
+
+    font-family: Arial, sans-serif;
+
+    color: #111827;
+
+    padding: 40px;
+}
+
+
+.main-container {
+
+    max-width: 1350px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 55px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.08);
+}
+
+
+
+.hero-section {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.hero-section h1 {
+
+    font-size: 54px;
+
+    font-weight: 700;
+
+    margin-bottom: 14px;
+}
+
+.hero-section p {
+
+    color: #6b7280;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+
+.upload-area {
+
+    display: block;
+
+    border: 3px dashed #d1d5db;
+
+    border-radius: 28px;
+
+    padding: 80px 20px;
+
+    background: #fafafa;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.upload-area:hover {
+
+    background: #f5f5f5;
+
+    border-color: #9ca3af;
+}
+
+.upload-area input {
+
+    display: none;
+}
+
+.upload-inner {
+
+    text-align: center;
+}
+
+.upload-icon {
+
+    width: 100px;
+
+    height: 100px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: black;
+
+    color: white;
+
+    font-size: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.upload-inner h2 {
+
+    font-size: 38px;
+
+    margin-bottom: 12px;
+}
+
+.upload-inner p {
+
+    color: #6b7280;
+
+    font-size: 17px;
+}
+
+
+
+.stats-grid {
+
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.stat-card {
+
+    background: #fafafa;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 22px;
+
+    padding: 35px;
+
+    text-align: center;
+}
+
+.stat-card h3 {
+
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+
+    color: #6b7280;
+
+    font-size: 16px;
+}
+
+
+
+#previewContainer {
+
+    margin-top: 50px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 35px;
+}
+
+.preview-card {
+
+    background: white;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+
+    transition: 0.3s;
+}
+
+.preview-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.08);
+}
+
+.preview-card img {
+
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: cover;
+}
+
+.preview-name {
+
+    padding: 20px;
+
+    text-align: center;
+
+    font-size: 14px;
+
+    word-break: break-word;
+}
+
+
+
+button {
+
+    width: 100%;
+
+    margin-top: 50px;
+
+    padding: 24px;
+
+    border: none;
+
+    border-radius: 24px;
+
+    background: black;
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+button:hover {
+
+    opacity: 0.9;
+}
+
+button:disabled {
+
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+
+.loading-box {
+
+    margin-top: 45px;
+
+    text-align: center;
+}
+
+.hidden {
+
+    display: none;
+}
+
+.loader {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    border: 8px solid #d1d5db;
+
+    border-top: 8px solid black;
+
+    animation: spin 1s linear infinite;
+}
+
+.loading-box p {
+
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    color: #6b7280;
+}
+
+@keyframes spin {
+
+    0% {
+
+        transform: rotate(0deg);
+    }
+
+    100% {
+
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.success-box {
+
+    margin-top: 45px;
+
+    background: #f0fdf4;
+
+    border: 2px solid #86efac;
+
+    border-radius: 26px;
+
+    padding: 45px;
+
+    text-align: center;
+}
+
+.success-icon {
+
+    width: 100px;
+
+    height: 100px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #16a34a;
+
+    color: white;
+
+    font-size: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.success-box h2 {
+
+    font-size: 34px;
+
+    margin-bottom: 12px;
+}
+
+.success-box p {
+
+    color: #6b7280;
+
+    font-size: 17px;
+}
+
+
+
+@media(max-width: 900px) {
+
+    body {
+
+        padding: 18px;
+    }
+
+    .main-container {
+
+        padding: 25px;
+    }
+
+    .hero-section h1 {
+
+        font-size: 40px;
+    }
+
+    .stats-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .preview-card img {
+
+        height: 300px;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        A4 Document Compressor
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="main-container">
+
+
+        <!-- HERO SECTION -->
+
+        <div class="hero-section">
+
+            <h1>
+                A4 Document Compressor
+            </h1>
+
+            <p>
+                Upload 4 document images and generate
+                a clean, readable and printable A4 PDF.
+            </p>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <form
+            id="uploadForm"
+            action="/upload"
+            method="post"
+            enctype="multipart/form-data"
+        >
+
+
+            <!-- UPLOAD AREA -->
+
+            <label class="upload-area">
+
+                <input
+                    type="file"
+                    id="fileInput"
+                    name="files"
+                    accept="image/*"
+                    multiple
+                    required
+                >
+
+                <div class="upload-inner">
+
+                    <div class="upload-icon">
+                        ↑
+                    </div>
+
+                    <h2>
+                        Upload 4 Images
+                    </h2>
+
+                    <p>
+                        JPG, PNG and JPEG supported
+                    </p>
+
+                </div>
+
+            </label>
+
+
+            <!-- STATS -->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <h3 id="imageCount">
+                        0
+                    </h3>
+
+                    <p>
+                        Images Selected
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>
+                        2×2
+                    </h3>
+
+                    <p>
+                        Smart A4 Grid
+                    </p>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <h3>
+                        HD
+                    </h3>
+
+                    <p>
+                        Enhanced Quality
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PREVIEW -->
+
+            <div id="previewContainer"></div>
+
+
+            <!-- BUTTON -->
+
+            <button
+                type="submit"
+                id="generateBtn"
+            >
+
+                Generate A4 PDF
+
+            </button>
+
+        </form>
+
+
+        <!-- LOADING -->
+
+        <div
+            id="loadingBox"
+            class="loading-box hidden"
+        >
+
+            <div class="loader"></div>
+
+            <p>
+                Processing documents...
+            </p>
+
+        </div>
+
+
+        <!-- SUCCESS -->
+
+        <div
+            id="successBox"
+            class="success-box hidden"
+        >
+
+            <div class="success-icon">
+
+                ✓
+
+            </div>
+
+            <h2>
+                PDF Generated Successfully
+            </h2>
+
+            <p>
+                Your optimized A4 PDF is ready.
+            </p>
+
+        </div>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+
+</body>
+
+</html>
